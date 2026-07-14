@@ -83,9 +83,7 @@ nav ul li a:hover { color: var(--vert); }
 .title-left { text-align: left; margin-bottom: 30px; border-left: 5px solid var(--vert); padding-left: 15px; font-size: 2rem; }
 .section-subtitle { margin-bottom: 30px; font-size: 1.1rem; color: #666; }
 
-section {
-    border-top: 1px solid #e0e0e0;
-}
+section { border-top: 1px solid #e0e0e0; }
 
 /* --- SERVICES --- */
 .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
@@ -114,33 +112,12 @@ a.service-item { text-decoration: none; color: var(--texte); }
     height: 120px; 
     transition: 0.3s; 
     cursor: pointer; 
+    overflow: hidden; 
 }
 .marque-item:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); transform: translateY(-3px); }
-.marque-item img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; transition: 0.3s; }
+.marque-item img { width: 100%; height: 100%; object-fit: contain; transition: 0.3s; }
 .marque-item:hover img { transform: scale(1.05); }
 .marque-item span { display: none; }
-
-.marque-item.avene:hover { border-color: #E85834; }
-.marque-item.biocanina:hover { border-color: #F47920; }
-.marque-item.boiron:hover { border-color: #003399; }
-.marque-item.caudalie:hover { border-color: #5C2D52; }
-.marque-item.cizeta:hover { border-color: #009FE3; }
-.marque-item.dexeryl:hover { border-color: #F58220; }
-.marque-item.gallia:hover { border-color: #1D3D8E; }
-.marque-item.hydralin:hover { border-color: #0066CC; }
-.marque-item.lrp:hover { border-color: #009FDA; }
-.marque-item.larosee:hover { border-color: #6EC1E4; }
-.marque-item.mkl:hover { border-color: #79BC00; }
-.marque-item.modilac:hover { border-color: #008FD7; }
-.marque-item.nhco:hover { border-color: #000000; }
-.marque-item.nutricia:hover { border-color: #009CDE; }
-.marque-item.nuxe:hover { border-color: #A77B50; }
-.marque-item.orliman:hover { border-color: #F39200; }
-.marque-item.pileje:hover { border-color: #003D7C; }
-.marque-item.saforelle:hover { border-color: #D36098; }
-.marque-item.santeverte:hover { border-color: #669933; }
-.marque-item.sigvaris:hover { border-color: #172983; }
-.marque-item.svr:hover { border-color: #002D72; }
 
 /* --- RECHERCHE & PROMOS --- */
 .header-promos { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 20px; gap: 15px; }
@@ -183,7 +160,6 @@ a.service-item { text-decoration: none; color: var(--texte); }
     transition: 0.3s; 
     cursor: zoom-in;
 }
-.img-zoom img { transform: scale(1.35); }
 
 .promo-card h3 { font-size: 1.1rem; margin-bottom: 15px; color: var(--texte); }
 .promo-price { font-size: 1.2rem; font-weight: bold; color: var(--vert-fonce); background: #f0fdf4; padding: 5px 15px; border-radius: 20px; display: inline-block; }
@@ -325,10 +301,22 @@ footer strong { color: var(--vert); }
     .btn-cookie { width: 100%; }
     
     /* MODIFICATIONS DU MENU SUR MOBILE */
-    nav { flex-wrap: wrap; }
+    nav { flex-wrap: wrap; justify-content: space-between; }
     .menu-toggle { display: block; }
     
-    nav ul { display: none; width: 100%; flex-direction: column; align-items: center; padding-top: 15px; }
+    nav ul { 
+        display: none; 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        right: 0; 
+        background: var(--blanc); 
+        flex-direction: column; 
+        align-items: center; 
+        padding-top: 0;
+        box-shadow: 0 15px 20px rgba(0,0,0,0.1); 
+        z-index: 999;
+    }
     nav ul.active { display: flex; animation: fadeIn 0.3s ease-in-out; }
     
     nav ul li { border-right: none; padding: 15px 0; margin-left: 0; width: 100%; text-align: center; border-bottom: 1px solid #f0f0f0; }
