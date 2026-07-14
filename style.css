@@ -15,7 +15,10 @@
 body { font-family: 'Poppins', sans-serif; color: var(--texte); line-height: 1.6; background-color: var(--blanc); scroll-behavior: smooth; }
 html { scroll-padding-top: 100px; }
 
-/* --- HEADER (MENU AVEC SÉPARATEURS NOIRS) --- */
+/* --- MENU BURGER ELEMENT --- */
+.menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: var(--vert); }
+
+/* --- HEADER --- */
 header { 
     background: var(--blanc); 
     padding: 20px 5%; 
@@ -36,7 +39,6 @@ nav ul {
     align-items: center; 
 }
 
-/* Traits de séparation noirs entre les liens */
 nav ul li { 
     margin-left: 15px; 
     border-right: 1px solid #000; 
@@ -44,7 +46,6 @@ nav ul li {
     line-height: 1; 
 }
 
-/* Pas de trait après le dernier élément */
 nav ul li:last-child { 
     border-right: none; 
     padding-right: 0; 
@@ -71,18 +72,17 @@ nav ul li a:hover { color: var(--vert); }
     background-position: center; 
     color: white; 
     padding: 0 5%;
-    border-top: none !important; /* Pas de trait au-dessus de l'image d'accueil */
+    border-top: none !important; 
 }
 .hero-text h1 { color: var(--vert); font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
 .btn { display: inline-block; background: var(--vert); color: white; padding: 12px 35px; text-decoration: none; border-radius: 30px; font-weight: 600; margin-top: 20px; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3); transition: all 0.3s ease; }
 .btn:hover { background: var(--vert-fonce); transform: scale(1.05) translateY(-3px); box-shadow: 0 8px 25px rgba(46, 204, 113, 0.5); }
 
-/* --- GLOBAL & SÉPARATEURS DE SECTION --- */
+/* --- GLOBAL --- */
 .container { padding: 60px 10%; }
 .title-left { text-align: left; margin-bottom: 30px; border-left: 5px solid var(--vert); padding-left: 15px; font-size: 2rem; }
 .section-subtitle { margin-bottom: 30px; font-size: 1.1rem; color: #666; }
 
-/* Trait gris de séparation entre chaque section */
 section {
     border-top: 1px solid #e0e0e0;
 }
@@ -95,7 +95,6 @@ section {
 .service-content h3 { font-size: 1.1rem; margin-bottom: 5px; }
 .service-content p { font-size: 0.9rem; color: #666; margin: 0; overflow-wrap: break-word; }
 
-/* LINK CARD */
 a.service-item { text-decoration: none; color: var(--texte); }
 .link-card { border: 1px solid transparent; }
 .link-card:hover { border-color: var(--vert); cursor: pointer; }
@@ -114,14 +113,13 @@ a.service-item { text-decoration: none; color: var(--texte); }
     align-items: center; 
     height: 120px; 
     transition: 0.3s; 
-    cursor: pointer; /* Curseur main pour indiquer que c'est cliquable (filtre) */
+    cursor: pointer; 
 }
 .marque-item:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); transform: translateY(-3px); }
 .marque-item img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; transition: 0.3s; }
 .marque-item:hover img { transform: scale(1.05); }
 .marque-item span { display: none; }
 
-/* COULEURS SPECIFIQUES MARQUES (EFFET FONDU AU SURVOL) */
 .marque-item.avene:hover { border-color: #E85834; }
 .marque-item.biocanina:hover { border-color: #F47920; }
 .marque-item.boiron:hover { border-color: #003399; }
@@ -167,10 +165,9 @@ a.service-item { text-decoration: none; color: var(--texte); }
 }
 .promo-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: var(--vert); }
 
-/* --- OPTION 1 : IMAGES UNIFORMES --- */
 .promo-img { 
     width: 100%;
-    height: 220px; /* Hauteur fixe */
+    height: 220px; 
     background: white; 
     border-radius: 10px; 
     display: flex; 
@@ -182,13 +179,12 @@ a.service-item { text-decoration: none; color: var(--texte); }
 .promo-img img { 
     width: 100%; 
     height: 100%; 
-    object-fit: contain; /* Affiche tout le produit */
+    object-fit: contain; 
     transition: 0.3s; 
     cursor: zoom-in;
 }
 .img-zoom img { transform: scale(1.35); }
 
-/* Suite Promos */
 .promo-card h3 { font-size: 1.1rem; margin-bottom: 15px; color: var(--texte); }
 .promo-price { font-size: 1.2rem; font-weight: bold; color: var(--vert-fonce); background: #f0fdf4; padding: 5px 15px; border-radius: 20px; display: inline-block; }
 .old-price { text-decoration: line-through; color: #999; font-size: 0.9em; margin-right: 8px; font-weight: normal; }
@@ -277,7 +273,7 @@ footer strong { color: var(--vert); }
 .legal-link { color: #888; text-decoration: none; font-size: 0.8rem; margin-top: 10px; display: inline-block; }
 .legal-link:hover { color: var(--vert); text-decoration: underline; }
 
-/* --- LIGHTBOX (ZOOM IMAGE) --- */
+/* --- LIGHTBOX --- */
 .lightbox { display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center; animation: fadeIn 0.3s; }
 .lightbox-content { margin: auto; display: block; max-width: 90%; max-height: 90%; border-radius: 5px; box-shadow: 0 0 20px rgba(255,255,255,0.2); animation: zoomIn 0.3s; }
 .close-lightbox { position: absolute; top: 20px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; cursor: pointer; }
@@ -307,7 +303,7 @@ footer strong { color: var(--vert); }
 .btn-cookie.refuse:hover { background: #ddd; }
 @keyframes slideUp { from { transform: translateY(100px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-/* --- MOBILE --- */
+/* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
     .hero-text h1 { font-size: 2rem; }
     .medadom-flex { flex-direction: column; text-align: center; }
@@ -328,9 +324,15 @@ footer strong { color: var(--vert); }
     .cookie-buttons { flex-direction: column; width: 100%; }
     .btn-cookie { width: 100%; }
     
-    /* Cache les séparateurs sur mobile et centre le menu */
-    nav ul { flex-direction: column; align-items: flex-start; }
-    nav ul li { border-right: none; padding: 10px 0; margin-left: 0; }
+    /* MODIFICATIONS DU MENU SUR MOBILE */
+    nav { flex-wrap: wrap; }
+    .menu-toggle { display: block; }
+    
+    nav ul { display: none; width: 100%; flex-direction: column; align-items: center; padding-top: 15px; }
+    nav ul.active { display: flex; animation: fadeIn 0.3s ease-in-out; }
+    
+    nav ul li { border-right: none; padding: 15px 0; margin-left: 0; width: 100%; text-align: center; border-bottom: 1px solid #f0f0f0; }
+    nav ul li:last-child { border-bottom: none; }
     
     .header-promos { flex-direction: column; align-items: center; }
 }

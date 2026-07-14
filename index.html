@@ -13,7 +13,12 @@
     <header>
         <nav>
             <div class="logo">Pharmacie <span>du Parc</span></div>
-            <ul>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul id="nav-list">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#services-rapides">Services</a></li>
                 <li><a href="#medadom">Téléconsultation</a></li>
@@ -345,7 +350,7 @@
             <span class="close close-privacy">×</span>
             <h2>Politique de Confidentialité</h2>
             <h3>1. Collecte des données</h3>
-            <p>Le site de la Pharmacie du Parc est un site vitrine. Nous ne collectons aucune donnée personnelle via des formulaires d'inscription. Les seules données traitées sont celles que vous nous envoyez volontairement par email.</p>
+            <p>Le site de la Pharmacie du Parc is un site vitrine. Nous ne collectons aucune donnée personnelle via des formulaires d'inscription. Les seules données traitées sont celles que vous nous envoyez volontairement par email.</p>
             <h3>2. Envoi d'ordonnance</h3>
             <p>Les ordonnances envoyées par email sont reçues directement sur la messagerie sécurisée de la pharmacie et ne sont utilisées que pour la préparation de votre commande.</p>
             <h3>3. Cookies</h3>
@@ -372,9 +377,6 @@
     </div>
 
     <script>
-        // --- 1. CONFIGURATION DES PROMOTIONS (MODE LOCAL) ---
-        // Pour éviter les problèmes de sécurité en local, nous mettons les données ici.
-        // Plus tard, vous pourrez remettre ça dans le fichier promos1.json si le site est en ligne.
         const produits = [
             {
                 "nom": "Oscillo Vitalité Enfant",
@@ -434,18 +436,14 @@
             }
         ];
 
-        // Fonction pour afficher les promos
         document.addEventListener('DOMContentLoaded', function() {
             const container = document.getElementById('promoContainer');
-            
-            // On vide le conteneur par sécurité
             container.innerHTML = '';
             
             produits.forEach(produit => {
                 let badgeHtml = '';
                 let priceHtml = '';
 
-                // Calcul Réduction
                 if (produit.prixAncien) {
                     const reduction = Math.round(((produit.prixAncien - produit.prixNouveau) / produit.prixAncien) * 100);
                     badgeHtml = `<div class="promo-badge">-${reduction}%</div>`;
@@ -454,7 +452,6 @@
                     priceHtml = `${produit.prixNouveau.toFixed(2).replace('.', ',')}€`;
                 }
 
-                // Création HTML
                 const card = document.createElement('div');
                 card.className = 'promo-card';
                 card.setAttribute('data-tags', produit.tags);
@@ -465,14 +462,12 @@
                     <div class="promo-price">${priceHtml}</div>
                 `;
                 
-                // Curseurs
                 const img = card.querySelector('img');
                 img.style.cursor = 'zoom-in';
                 
                 container.appendChild(card);
             });
 
-            // Lightbox pour fidélité uniquement (pas les marques car elles filtrent)
             setTimeout(() => {
                 var images = document.querySelectorAll('.fidelite-image img');
                 images.forEach(function(img) {
@@ -482,7 +477,6 @@
             }, 500);
         });
 
-        // --- 2. LIGHTBOX ---
         function openLightbox(img) {
             var lightbox = document.getElementById("lightbox");
             var lightboxImg = document.getElementById("lightbox-img");
@@ -494,7 +488,6 @@
             document.getElementById("lightbox").style.display = "none";
         }
 
-        // --- 3. FILTRE MARQUE ---
         function filterByBrand(brandName) {
             document.getElementById('promotions').scrollIntoView({ behavior: 'smooth' });
             const searchInput = document.getElementById('searchProduct');
@@ -503,7 +496,6 @@
             searchInput.dispatchEvent(event);
         }
 
-        // --- 4. RECHERCHE PRODUIT ---
         const searchInput = document.getElementById('searchProduct');
         const noResults = document.getElementById('no-results');
 
@@ -533,7 +525,6 @@
             });
         }
 
-        // --- 5. MODALES ---
         function setupModal(modalId, btnId, closeClass) {
             var modal = document.getElementById(modalId);
             var btn = document.getElementById(btnId);
@@ -545,7 +536,6 @@
         setupModal("mentionsModal", "mentionsBtn", "close-mentions");
         setupModal("privacyModal", "privacyBtn", "close-privacy");
 
-        // --- 6. COOKIES ---
         document.getElementById('cookieBanner').style.display = 'flex';
         document.getElementById('acceptCookies').onclick = function() { localStorage.setItem('cookieConsent', 'accepted'); document.getElementById('cookieBanner').style.display = 'none'; };
         document.getElementById('refuseCookies').onclick = function() { localStorage.setItem('cookieConsent', 'refused'); document.getElementById('cookieBanner').style.display = 'none'; };
@@ -562,7 +552,6 @@
             };
         }
 
-        // --- 7. GARDE ---
         var btnGarde = document.getElementById("btnGarde");
         var inputZip = document.getElementById("zipCode");
         if(btnGarde && inputZip) {
@@ -574,6 +563,25 @@
                 } else { alert("Veuillez entrer un code postal valide à 5 chiffres (ex: 77150)."); }
             };
             inputZip.addEventListener("keypress", function(event) { if (event.key === "Enter") btnGarde.click(); });
+        }
+
+        // --- 8. MENU BURGER MOBILE ---
+        var btnBurger = document.getElementById('mobile-menu');
+        var listeMenu = document.getElementById('nav-list');
+        var liensMenu = document.querySelectorAll('#nav-list a');
+
+        if(btnBurger && listeMenu) {
+            btnBurger.onclick = function() {
+                listeMenu.classList.toggle('active');
+            };
+        }
+
+        if(liensMenu) {
+            liensMenu.forEach(function(lien) {
+                lien.onclick = function() {
+                    listeMenu.classList.remove('active');
+                };
+            });
         }
     </script>
 </body>
