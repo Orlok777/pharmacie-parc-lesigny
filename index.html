@@ -13,24 +13,19 @@
     <header>
         <nav>
             <div class="logo">Pharmacie <span>du Parc</span></div>
-            
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-
-            <ul id="nav-list">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#services-rapides">Services</a></li>
-                <li><a href="#medadom">Téléconsultation</a></li>
-                <li><a href="#infos">Infos</a></li>
-                <li><a href="#ordonnance">Ordonnance</a></li>
-                <li><a href="#promotions">Promos</a></li>
-                <li><a href="#fidelite">Fidélité</a></li>
-                <li><a href="#garde">Garde</a></li>
-                <li><a href="#faq">Questions</a></li>
-                <li><a href="#marques">Partenaires</a></li>
-                <li><a href="#avis">Avis</a></li>
-                <li><a href="#reseaux">Rejoignez-nous</a></li>
+            <ul>
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#services-rapides" class="nav-link">Services</a></li>
+                <li><a href="#medadom" class="nav-link">Téléconsultation</a></li>
+                <li><a href="#infos" class="nav-link">Infos</a></li>
+                <li><a href="#ordonnance" class="nav-link">Ordonnance</a></li>
+                <li><a href="#promotions" class="nav-link">Promos</a></li>
+                <li><a href="#fidelite" class="nav-link">Fidélité</a></li>
+                <li><a href="#garde" class="nav-link">Garde</a></li>
+                <li><a href="#faq" class="nav-link">Questions</a></li>
+                <li><a href="#marques" class="nav-link">Partenaires</a></li>
+                <li><a href="#avis" class="nav-link">Avis</a></li>
+                <li><a href="#reseaux" class="nav-link">Rejoignez-nous</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +34,7 @@
         <div class="hero-text">
             <h1>Bienvenue à la Pharmacie du Parc</h1>
             <p>Votre santé, notre priorité au cœur de Lésigny.</p>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=Pharmacie+du+Parc+Lesigny+Centre+Commercial+du+Parc" target="_blank" class="btn">Nous trouver</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Pharmacie+du+Parc+Lesigny+Rue+d+Artois" target="_blank" class="btn">Nous trouver</a>
         </div>
     </section>
 
@@ -53,7 +48,6 @@
                     <p>Réalisation de bilans de prévention et d'entretiens pharmaceutiques</p>
                 </div>
             </div>
-
             <div class="service-item">
                 <i class="fas fa-syringe"></i>
                 <div class="service-content">
@@ -75,7 +69,6 @@
                     <p>Grippe, Covid, Angine*, Cystite*</p>
                 </div>
             </div>
-            
             <a href="https://mon-materiel-medical-en-pharmacie.fr" target="_blank" class="service-item link-card">
                 <i class="fas fa-wheelchair"></i>
                 <div class="service-content">
@@ -90,7 +83,7 @@
     <section id="medadom" class="container">
         <div class="medadom-flex">
             <div class="medadom-image">
-                <img src="medadom.png" alt="Borne Medadom">
+                <img src="medadom.png" alt="Borne de téléconsultation Medadom disponible en pharmacie">
             </div>
             <div class="medadom-text">
                 <h2>Borne de téléconsultation</h2>
@@ -116,14 +109,12 @@
                 </ul>
                 <div class="urgence-box">Urgence : Appelez le 15</div>
             </div>
-
             <div class="card card-left">
                 <i class="fas fa-map-marker-alt icon-card"></i>
                 <h3>Adresse</h3>
-                <p>Centre Commercial du Parc</p>
+                <p>Rue d'Artois</p>
                 <p>77150 Lésigny</p>
             </div>
-
             <div class="card card-left">
                 <i class="fas fa-envelope icon-card"></i>
                 <h3>Contact</h3>
@@ -157,17 +148,14 @@
     <section id="promotions" class="container">
         <div class="header-promos">
             <h2 class="title-left" style="margin-bottom: 10px;">Nos promotions du mois</h2>
-            
             <div class="search-promo-box">
                 <i class="fas fa-search search-icon"></i>
                 <input type="text" id="searchProduct" placeholder="Rechercher un produit (ex: Nuxe, Coffret, Bébé)...">
             </div>
         </div>
-
         <div id="no-results" style="display:none; text-align:center; padding: 20px; color: #666;">
             Aucun produit ne correspond à votre recherche.
         </div>
-
         <div class="promo-grid" id="promoContainer"></div>
     </section>
 
@@ -175,12 +163,11 @@
         <h2 class="title-left">Votre Fidélité Récompensée</h2>
         <div class="fidelite-card">
             <div class="fidelite-image">
-                <img src="carte-fidelite.jpg" alt="Carte de fidélité Pharmacie du Parc" onerror="this.src='https://placehold.co/600x400/2ecc71/ffffff?text=Votre+Photo+Ici';">
+                <img src="carte-fidelite.jpg" alt="Visuel de la carte de fidélité de la Pharmacie du Parc" onerror="this.src='https://placehold.co/600x400/2ecc71/ffffff?text=Votre+Photo+Ici';">
             </div>
             <div class="fidelite-content">
                 <h3>Cumulez des points à chaque achat !</h3>
                 <p>Profitez de notre programme de fidélité avantageux. Vos achats en parapharmacie vous rapportent des points convertibles en bons d'achat pour vous faire plaisir.</p>
-                
                 <div class="fidelite-info-box">
                     <i class="fas fa-store"></i>
                     <div>
@@ -201,12 +188,10 @@
             <div class="garde-content">
                 <h3>Trouver une pharmacie ouverte maintenant</h3>
                 <p>En dehors des horaires d'ouverture (nuit, dimanche, jours fériés), veuillez renseigner votre code postal ci-dessous pour trouver la pharmacie de garde la plus proche.</p>
-                
                 <div class="search-box">
                     <input type="text" id="zipCode" placeholder="Votre code postal (ex: 77150)" maxlength="5">
                     <button id="btnGarde" class="btn-search">Rechercher</button>
                 </div>
-                
                 <p class="gdpr-note"><i class="fas fa-lock"></i> Votre localisation n'est pas enregistrée et sert uniquement à la recherche.</p>
             </div>
         </div>
@@ -242,33 +227,31 @@
         </div>
     </section>
 
-    <section id="marques" class="container">
+   <section id="marques" class="container">
         <h2 class="title-left">Nos marques partenaires</h2>
         <p class="section-subtitle">Retrouvez toutes vos gammes préférées de parapharmacie, homéopathie et orthopédie.</p>
-        
         <div class="marques-grid">
-            <div class="marque-item avene" onclick="filterByBrand('avene')"><img src="logos/avene.png" alt="Avène"></div>
-            <div class="marque-item biocanina" onclick="filterByBrand('biocanina')"><img src="logos/biocanina.png" alt="Biocanina"></div>
-            <div class="marque-item boiron" onclick="filterByBrand('oscillo')"><img src="logos/boiron.png" alt="Boiron"></div>
-            <div class="marque-item caudalie" onclick="filterByBrand('caudalie')"><img src="logos/Caudalie.png" alt="Caudalie"></div>
-            <div class="marque-item cizeta" onclick="filterByBrand('cizeta')"><img src="logos/cizeta.png" alt="Cizeta"></div>
-            <div class="marque-item dexeryl" onclick="filterByBrand('dexeryl')"><img src="logos/dexeryl.png" alt="Dexeryl"></div>
-            <div class="marque-item gallia" onclick="filterByBrand('gallia')"><img src="logos/gallia.png" alt="Gallia"></div>
-            <div class="marque-item hydralin" onclick="filterByBrand('hydralin')"><img src="logos/hydralin.png" alt="Hydralin"></div>
-            <div class="marque-item lrp" onclick="filterByBrand('roche')"><img src="logos/la-roche-posay_1.png" alt="La Roche-Posay"></div>
-            <div class="marque-item larosee" onclick="filterByBrand('rosée')"><img src="logos/la rosée.png" alt="La Rosée"></div>
-            <div class="marque-item mkl" onclick="filterByBrand('mkl')"><img src="logos/mkl.png" alt="MKL"></div>
-            <div class="marque-item modilac" onclick="filterByBrand('modilac')"><img src="logos/modilac.png" alt="Modilac"></div>
-            
-            <div class="marque-item nhco" onclick="filterByBrand('nhco')"><img src="logos/ncho.png" alt="NHCO"></div>
-            <div class="marque-item nutricia" onclick="filterByBrand('nutricia')"><img src="logos/nutricia.png" alt="Nutricia"></div>
-            <div class="marque-item nuxe" onclick="filterByBrand('nuxe')"><img src="logos/nuxe.png" alt="Nuxe"></div>
-            <div class="marque-item orliman" onclick="filterByBrand('orliman')"><img src="logos/orliman.png" alt="Orliman"></div>
-            <div class="marque-item pileje" onclick="filterByBrand('pileje')"><img src="logos/pileje.png" alt="Pileje"></div>
-            <div class="marque-item saforelle" onclick="filterByBrand('saforelle')"><img src="logos/saforelle.png" alt="Saforelle"></div>
-            <div class="marque-item santeverte" onclick="filterByBrand('santé verte')"><img src="logos/santé verte.png" alt="Santé Verte"></div>
-            <div class="marque-item sigvaris" onclick="filterByBrand('sigvaris')"><img src="logos/sigvaris.png" alt="Sigvaris"></div>
-            <div class="marque-item svr" onclick="filterByBrand('svr')"><img src="logos/svr.png" alt="SVR"></div>
+            <div class="marque-item" onclick="filterByBrand('avene')"><img src="logos/avene.png" alt="Logo de la marque Avène"></div>
+            <div class="marque-item" onclick="filterByBrand('biocanina')"><img src="logos/biocanina.png" alt="Logo de la marque Biocanina"></div>
+            <div class="marque-item" onclick="filterByBrand('oscillo')"><img src="logos/boiron.png" alt="Logo du laboratoire Boiron"></div>
+            <div class="marque-item" onclick="filterByBrand('caudalie')"><img src="logos/Caudalie.png" alt="Logo de la marque Caudalie"></div>
+            <div class="marque-item" onclick="filterByBrand('cizeta')"><img src="logos/cizeta.png" alt="Logo de la marque Cizeta"></div>
+            <div class="marque-item" onclick="filterByBrand('dexeryl')"><img src="logos/dexeryl.png" alt="Logo de la marque Dexeryl"></div>
+            <div class="marque-item" onclick="filterByBrand('gallia')"><img src="logos/gallia.png" alt="Logo de la marque Gallia"></div>
+            <div class="marque-item" onclick="filterByBrand('hydralin')"><img src="logos/Hydralin.png" alt="Logo de la marque Hydralin"></div>
+            <div class="marque-item" onclick="filterByBrand('roche')"><img src="logos/la-roche-posay_1.png" alt="Logo de la marque La Roche-Posay"></div>
+            <div class="marque-item" onclick="filterByBrand('rosée')"><img src="logos/la rosée.png" alt="Logo de la marque La Rosée"></div>
+            <div class="marque-item" onclick="filterByBrand('mkl')"><img src="logos/mkl.png" alt="Logo de la marque MKL"></div>
+            <div class="marque-item" onclick="filterByBrand('modilac')"><img src="logos/modilac.png" alt="Logo de la marque Modilac"></div>
+            <div class="marque-item" onclick="filterByBrand('nhco')"><img src="logos/ncho.png" alt="Logo de la marque NHCO"></div>
+            <div class="marque-item" onclick="filterByBrand('nutricia')"><img src="logos/nutricia.png" alt="Logo de la marque Nutricia"></div>
+            <div class="marque-item" onclick="filterByBrand('nuxe')"><img src="logos/nuxe.png" alt="Logo de la marque Nuxe"></div>
+            <div class="marque-item" onclick="filterByBrand('orliman')"><img src="logos/orliman.png" alt="Logo de la marque Orliman"></div>
+            <div class="marque-item" onclick="filterByBrand('pileje')"><img src="logos/pileje.png" alt="Logo de la marque Pileje"></div>
+            <div class="marque-item" onclick="filterByBrand('saforelle')"><img src="logos/Saforelle.png" alt="Logo de la marque Saforelle"></div>
+            <div class="marque-item" onclick="filterByBrand('santé verte')"><img src="logos/santé verte.png" alt="Logo de la marque Santé Verte"></div>
+            <div class="marque-item" onclick="filterByBrand('sigvaris')"><img src="logos/sigvaris.png" alt="Logo de la marque Sigvaris"></div>
+            <div class="marque-item" onclick="filterByBrand('svr')"><img src="logos/svr.png" alt="Logo de la marque SVR"></div>
         </div>
     </section>
 
@@ -304,10 +287,12 @@
         <p>
             <a href="#" id="mentionsBtn" class="legal-link">Mentions Légales</a> | 
             <a href="#" id="privacyBtn" class="legal-link">Politique de Confidentialité</a> |
-            <a href="#" id="resetCookiesBtn" class="legal-link">Gestion des cookies</a>
+            <a href="#" id="resetCookiesBtn" class="legal-link">Gestion des cookies</a> |
+            <a href="accessibilite.html" class="legal-link">Accessibilité</a>
         </p>
     </footer>
 
+    <!-- modales legales -->
     <div id="mentionsModal" class="modal">
         <div class="modal-content">
             <span class="close close-mentions">×</span>
@@ -315,7 +300,7 @@
             <h3>1. Éditeur du site</h3>
             <p><strong>Dénomination :</strong> Pharmacie du Parc<br>
             <strong>Forme juridique :</strong> Société d'exercice libéral à responsabilité limitée<br>
-            <strong>Adresse :</strong> Centre Commercial du Parc, 77150 Lésigny<br>
+            <strong>Adresse :</strong> Rue d'Artois, 77150 Lésigny<br>
             <strong>Capital social :</strong> 100 000 €<br>
             <strong>RCS :</strong> RCS Melun 891 700 080<br>
             <strong>SIRET :</strong> 891700080<br>
@@ -326,11 +311,9 @@
             <p><strong>Pharmacien titulaire :</strong> Docteur Houdard Mireille, Pharmacienne<br>
             <strong>Ordre des Pharmaciens :</strong> Inscrits à l'Ordre National des Pharmaciens<br>
             <strong>RPPS :</strong> 10001821452<br>
-            <strong>Autorité de tutelle :</strong> Agence Régionale de Santé (ARS) Île-de-France<br>
-            <br>
+            <strong>Autorité de tutelle :</strong> Agence Régionale de Santé (ARS) Île-de-France<br><br>
             <strong>Ordre National des Pharmaciens :</strong> <a href="https://www.ordre.pharmacien.fr" target="_blank">www.ordre.pharmacien.fr</a><br>
-            <strong>Ministère de la Santé :</strong> <a href="https://sante.gouv.fr/" target="_blank">sante.gouv.fr</a>
-            </p>
+            <strong>Ministère de la Santé :</strong> <a href="https://sante.gouv.fr/" target="_blank">sante.gouv.fr</a></p>
 
             <h3>3. Hébergement</h3>
             <p>[À COMPLÉTER PAR VOTRE HÉBERGEUR]</p>
@@ -340,29 +323,49 @@
             <strong>CM2C</strong><br>
             Site web : <a href="https://www.cm2c.net/" target="_blank">www.cm2c.net</a><br>
             Adresse postale : 49 rue de Ponthieu - 75008 PARIS</p>
-
             <p style="margin-top:20px; font-size: 0.8rem; color:#888;">Dernière mise à jour : 2026</p>
         </div>
     </div>
 
+    <!-- modale politique confidentialite -->
+    <!-- modale politique confidentialite -->
     <div id="privacyModal" class="modal">
         <div class="modal-content">
             <span class="close close-privacy">×</span>
-            <h2>Politique de Confidentialité</h2>
-            <h3>1. Collecte des données</h3>
-            <p>Le site de la Pharmacie du Parc is un site vitrine. Nous ne collectons aucune donnée personnelle via des formulaires d'inscription. Les seules données traitées sont celles que vous nous envoyez volontairement par email.</p>
-            <h3>2. Envoi d'ordonnance</h3>
-            <p>Les ordonnances envoyées par email sont reçues directement sur la messagerie sécurisée de la pharmacie et ne sont utilisées que pour la préparation de votre commande.</p>
-            <h3>3. Cookies</h3>
-            <p>Ce site utilise un stockage local uniquement pour mémoriser votre choix concernant le bandeau cookies.</p>
+            <h2>Politique de Confidentialité (RGPD)</h2>
+            
+            <h3>1. Responsable du traitement</h3>
+            <p>Le traitement des données personnelles collectées sur ce site est sous la responsabilité de Mme Mireille Houdard, pharmacienne titulaire de la Pharmacie du Parc.</p>
+            
+            <h3>2. Données collectées et finalité</h3>
+            <p>Notre site est principalement une vitrine. Cependant, lorsque vous utilisez le bouton "Envoyer mon ordonnance", votre logiciel de messagerie s'ouvre. Nous collectons alors :</p>
+            <ul style="margin-left: 20px; margin-bottom: 15px; color: #555; font-size: 0.9rem;">
+                <li>Votre adresse email et votre nom.</li>
+                <li>Des données de santé sensibles (la photo de votre ordonnance).</li>
+            </ul>
+            <p><strong>Finalité :</strong> Ces données servent uniquement à préparer votre commande à l'avance.</p>
+            <p><strong>Base légale :</strong> Votre consentement explicite lorsque vous nous envoyez cet email.</p>
+
+            <h3>3. Durée de conservation</h3>
+            <p>Les emails contenant vos ordonnances sont conservés de manière sécurisée uniquement le temps nécessaire à la préparation et à la délivrance de vos médicaments. Ils sont ensuite supprimés de notre messagerie.</p>
+
+            <h3>4. Sécurité et Hébergement</h3>
+            <p>Les données de santé font l'objet d'une protection particulière. Notre messagerie est strictement accessible par l'équipe pharmaceutique tenue au secret professionnel.</p>
+
+            <h3>5. Vos droits (CNIL)</h3>
+            <p>Conformément à la loi "Informatique et Libertés" et au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition sur vos données. Pour l'exercer, contactez-nous par email à pharmacie.parc.lesigny@gmail.com ou directement au comptoir.</p>
+            <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la <a href="https://www.cnil.fr" target="_blank" style="color: var(--vert);">CNIL</a>.</p>
+
+            <h3>6. Cookies</h3>
+            <p>Ce site n'utilise aucun cookie de traçage publicitaire sans votre accord explicite. Un simple stockage local est utilisé pour mémoriser votre choix d'affichage du bandeau d'information.</p>
         </div>
     </div>
-
+    <!-- banniere cookies -->
     <div id="cookieBanner" class="cookie-banner">
         <div class="cookie-content">
             <div class="cookie-text">
                 <h3>🍪 Cookies & Confidentialité</h3>
-                <p>Nous utilisons des cookies pour garantir le bon fonctionnement du site. Acceptez-vous ces cookies ?</p>
+                <p>Nous utilisons des cookies pour garantir le bon fonctionnement du site et analyser notre audience. Acceptez-vous l'utilisation de ces traceurs ?</p>
             </div>
             <div class="cookie-buttons">
                 <button id="acceptCookies" class="btn-cookie accept">Accepter</button>
@@ -371,79 +374,59 @@
         </div>
     </div>
     
+    <!-- lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="close-lightbox">×</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
 
+    <!-- scripts -->
     <script>
+        // configuration des promotions (liste complete en local)
         const produits = [
-            {
-                "nom": "Oscillo Vitalité Enfant",
-                "image": "promos/oscillo_vitalite_3ans.png",
-                "prixAncien": 13.50,
-                "prixNouveau": 11.50,
-                "tags": "oscillo boiron vitalite enfant fatigue"
-            },
-            {
-                "nom": "Oscillo Vitalité Adulte",
-                "image": "promos/oscillo_vitalite_multi_actif.png",
-                "prixAncien": 14.50,
-                "prixNouveau": 12.50,
-                "tags": "oscillo boiron vitalite adulte fatigue"
-            },
-            {
-                "nom": "Physiodose Sérum Physio",
-                "image": "promos/physiodose.png",
-                "prixAncien": null,
-                "prixNouveau": 3.50,
-                "tags": "physiodose serum physiologique bebe nez"
-            },
-            {
-                "nom": "Lingettes Bébé WaterWipes",
-                "image": "promos/waterwipes.png",
-                "prixAncien": null,
-                "prixNouveau": 9.99,
-                "tags": "waterwipes lingettes bebe change"
-            },
-            {
-                "nom": "Coffret Avène Densité",
-                "image": "promos/soins_experts_densite.png",
-                "prixAncien": 76.90,
-                "prixNouveau": 69.90,
-                "tags": "avene coffret densite visage anti age"
-            },
-            {
-                "nom": "Berocca Energie 30cp",
-                "image": "promos/beroca_energie_30cp.png",
-                "prixAncien": 15.90,
-                "prixNouveau": 10.99,
-                "tags": "berocca energie fatigue vitamine forme"
-            },
-            {
-                "nom": "Berocca Magnésium",
-                "image": "promos/berroca_magnesium.png",
-                "prixAncien": null,
-                "prixNouveau": 13.99,
-                "tags": "berocca magnesium fatigue stress"
-            },
-            {
-                "nom": "Huile Prodigieuse Nuxe",
-                "image": "promos/huile_prodigieuse_nuxe.png",
-                "prixAncien": 26.90,
-                "prixNouveau": 16.14,
-                "tags": "nuxe huile prodigieuse corps visage cheveux"
-            }
+            { "nom": "Berocca Energie 30cp", "image": "promos/beroca_energie_30cp.png", "prixAncien": 15.90, "prixNouveau": 10.99, "tags": "berocca energie fatigue vitamine forme" },
+            { "nom": "Berocca Magnésium", "image": "promos/berroca_magnesium.png", "prixAncien": null, "prixNouveau": 13.99, "tags": "berocca magnesium fatigue stress" },
+            { "nom": "Huile Prodigieuse Nuxe", "image": "promos/huile_prodigieuse_nuxe.png", "prixAncien": 26.90, "prixNouveau": 16.14, "tags": "nuxe huile prodigieuse corps visage cheveux" },
+            { "nom": "Coffret Nuxe Infiniment Glow", "image": "promos/infiniment_glow_en_rose_nuxe.png", "prixAncien": null, "prixNouveau": 34.60, "tags": "nuxe coffret cadeau glow rose" },
+            { "nom": "Coffret Nuxe Les Iconiques", "image": "promos/les_iconiques_nuxe.png", "prixAncien": null, "prixNouveau": 26.95, "tags": "nuxe coffret iconique cadeau" },
+            { "nom": "Trousse Nuxe Golden Crush", "image": "promos/my_golden_crush_nuxe.png", "prixAncien": null, "prixNouveau": 23.95, "tags": "nuxe trousse golden crush voyage" },
+            { "nom": "Trousse Nuxe Pink Crush", "image": "promos/my_pink_crush_trousse_nuxe.png", "prixAncien": null, "prixNouveau": 23.95, "tags": "nuxe trousse pink crush voyage" },
+            { "nom": "Listerine Fraîcheur Intense", "image": "promos/listerine_fraicheur_intense.png", "prixAncien": 4.20, "prixNouveau": 3.99, "tags": "listerine bain bouche fraicheur intense dents" },
+            { "nom": "Listerine Fraîcheur Goût Léger", "image": "promos/listerine_fraicheur_leger.png", "prixAncien": 4.20, "prixNouveau": 3.99, "tags": "listerine bain bouche fraicheur leger dents" },
+            { "nom": "Listerine Total Care Protection", "image": "promos/listerine_total_care.png", "prixAncien": 4.20, "prixNouveau": 3.99, "tags": "listerine total care protection dents" },
+            { "nom": "Listerine Total Care Goût Léger", "image": "promos/listerine_total_care_leger.png", "prixAncien": 4.20, "prixNouveau": 3.99, "tags": "listerine total care leger dents" },
+            { "nom": "Listerine Total Care Violet", "image": "promos/listerine_total_care_leger_violet.png", "prixAncien": 4.20, "prixNouveau": 3.99, "tags": "listerine total care violet dents" },
+            { "nom": "Coffret MKL Mare Sauvage", "image": "promos/mare_sauvage_mkl.png", "prixAncien": null, "prixNouveau": 8.90, "tags": "mkl coffret mare sauvage homme" },
+            { "nom": "Coffret MKL Miel Gourmand", "image": "promos/miel_gourmand_mkl.png", "prixAncien": null, "prixNouveau": 11.90, "tags": "mkl coffret miel gourmand" },
+            { "nom": "Coffret MKL Perle de Coco", "image": "promos/perle_de_coco_mkl.png", "prixAncien": null, "prixNouveau": 11.90, "tags": "mkl coffret perle coco" },
+            { "nom": "Laino Nutri Olive Corps", "image": "promos/nutri_olive_laino.png", "prixAncien": null, "prixNouveau": 11.90, "tags": "laino olive corps hydratation" },
+            { "nom": "Nuxe Men Baume Après-Rasage", "image": "promos/nuxe_men_baume_apres_rasage.png", "prixAncien": 24.90, "prixNouveau": 14.94, "tags": "nuxe men homme baume rasage" },
+            { "nom": "Nuxe Men Déodorant 24H", "image": "promos/nuxe_men_deodorant.png", "prixAncien": 9.90, "prixNouveau": 5.94, "tags": "nuxe men homme deodorant" },
+            { "nom": "Nuxe Men Gel de Rasage", "image": "promos/nuxe_men_gel_rasant.png", "prixAncien": 12.90, "prixNouveau": 7.74, "tags": "nuxe men homme gel rasage" },
+            { "nom": "Nuxe Nuxuriance Ultra", "image": "promos/nuxe_nuxuriance_ultra.png", "prixAncien": 57.50, "prixNouveau": 34.50, "tags": "nuxe nuxuriance ultra anti age" },
+            { "nom": "Nuxe Prodigieuse Boost Crème", "image": "promos/nuxe_prodigieuse_boost.png", "prixAncien": 32.90, "prixNouveau": 19.74, "tags": "nuxe prodigieuse boost creme eclat" },
+            { "nom": "Nuxe Prodigieuse Boost Baume", "image": "promos/nuxe_prodigieuse_boost_baume.png", "prixAncien": 35.90, "prixNouveau": 21.54, "tags": "nuxe prodigieuse boost baume nuit" },
+            { "nom": "Coffret Nuxe Rituel d'Exception", "image": "promos/rituel_dexception_nuxe.png", "prixAncien": null, "prixNouveau": 19.50, "tags": "nuxe coffret rituel exception cadeau" },
+            { "nom": "Oscillo Immunité 60cp", "image": "promos/oscillo_promo.png", "prixAncien": 14.50, "prixNouveau": 12.50, "tags": "oscillo boiron immunite hiver grippe" },
+            { "nom": "Oscillo Immunité Enfant", "image": "promos/oscillo_immunite_3ans.png", "prixAncien": 14.50, "prixNouveau": 12.50, "tags": "oscillo boiron immunite enfant hiver" },
+            { "nom": "Oscillo Vitalité Enfant", "image": "promos/oscillo_vitalite_3ans.png", "prixAncien": 13.50, "prixNouveau": 11.50, "tags": "oscillo boiron vitalite enfant fatigue" },
+            { "nom": "Oscillo Vitalité Adulte", "image": "promos/oscillo_vitalite_multi_actif.png", "prixAncien": 14.50, "prixNouveau": 12.50, "tags": "oscillo boiron vitalite adulte fatigue" },
+            { "nom": "Physiodose Sérum Physio", "image": "promos/physiodose.png", "prixAncien": null, "prixNouveau": 3.50, "tags": "physiodose serum physiologique bebe nez" },
+            { "nom": "Lingettes Bébé WaterWipes", "image": "promos/waterwipes.png", "prixAncien": null, "prixNouveau": 9.99, "tags": "waterwipes lingettes bebe change" },
+            { "nom": "Coffret Avène Densité", "image": "promos/soins_experts_densite.png", "prixAncien": 76.90, "prixNouveau": 69.90, "tags": "avene coffret densite visage anti age" },
+            { "nom": "Coffret Avène Fermeté", "image": "promos/soins_experts_fermete.png", "prixAncien": 51.90, "prixNouveau": 44.90, "tags": "avene coffret fermete visage anti age" }
         ];
 
         document.addEventListener('DOMContentLoaded', function() {
             const container = document.getElementById('promoContainer');
+            if(!container) return;
             container.innerHTML = '';
             
             produits.forEach(produit => {
                 let badgeHtml = '';
                 let priceHtml = '';
 
+                // calcul reduction
                 if (produit.prixAncien) {
                     const reduction = Math.round(((produit.prixAncien - produit.prixNouveau) / produit.prixAncien) * 100);
                     badgeHtml = `<div class="promo-badge">-${reduction}%</div>`;
@@ -477,25 +460,25 @@
             }, 500);
         });
 
+        // lightbox
         function openLightbox(img) {
-            var lightbox = document.getElementById("lightbox");
-            var lightboxImg = document.getElementById("lightbox-img");
-            lightbox.style.display = "flex";
-            lightboxImg.src = img.src;
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = img.src;
         }
 
         function closeLightbox() {
             document.getElementById("lightbox").style.display = "none";
         }
 
+        // filtre marque
         function filterByBrand(brandName) {
             document.getElementById('promotions').scrollIntoView({ behavior: 'smooth' });
             const searchInput = document.getElementById('searchProduct');
             searchInput.value = brandName;
-            const event = new Event('input');
-            searchInput.dispatchEvent(event);
+            searchInput.dispatchEvent(new Event('input'));
         }
 
+        // recherche produit
         const searchInput = document.getElementById('searchProduct');
         const noResults = document.getElementById('no-results');
 
@@ -525,6 +508,7 @@
             });
         }
 
+        // modales legales
         function setupModal(modalId, btnId, closeClass) {
             var modal = document.getElementById(modalId);
             var btn = document.getElementById(btnId);
@@ -536,22 +520,31 @@
         setupModal("mentionsModal", "mentionsBtn", "close-mentions");
         setupModal("privacyModal", "privacyBtn", "close-privacy");
 
-        document.getElementById('cookieBanner').style.display = 'flex';
-        document.getElementById('acceptCookies').onclick = function() { localStorage.setItem('cookieConsent', 'accepted'); document.getElementById('cookieBanner').style.display = 'none'; };
-        document.getElementById('refuseCookies').onclick = function() { localStorage.setItem('cookieConsent', 'refused'); document.getElementById('cookieBanner').style.display = 'none'; };
-        
-        var resetBtn = document.getElementById("resetCookiesBtn");
-        if (resetBtn) {
-            resetBtn.onclick = function(e) {
-                e.preventDefault();
-                var banner = document.getElementById('cookieBanner');
-                banner.style.display = 'flex';
-                banner.classList.remove('slideUp');
-                void banner.offsetWidth; 
-                banner.style.animation = "slideUp 0.5s ease-out";
-            };
-        }
+       // --- 7. GESTION DES COOKIES (MODIFIÉ POUR TESTS) ---
+const banner = document.getElementById('cookieBanner');
 
+// LIGNE DE TEST : On efface le choix précédent à chaque chargement de page
+// Cela forcera le bandeau à s'afficher à chaque fois que vous rafraîchissez.
+localStorage.removeItem('cookieConsent'); 
+
+// Affichage automatique
+banner.style.display = 'flex';
+
+// Clic sur accepter
+document.getElementById('acceptCookies').onclick = function() { 
+    localStorage.setItem('cookieConsent', 'accepted'); 
+    banner.style.display = 'none'; 
+    console.log("Consentement accepté.");
+};
+
+// Clic sur refuser
+document.getElementById('refuseCookies').onclick = function() { 
+    localStorage.setItem('cookieConsent', 'refused'); 
+    banner.style.display = 'none'; 
+    console.log("Consentement refusé.");
+};
+
+        // garde
         var btnGarde = document.getElementById("btnGarde");
         var inputZip = document.getElementById("zipCode");
         if(btnGarde && inputZip) {
@@ -565,24 +558,10 @@
             inputZip.addEventListener("keypress", function(event) { if (event.key === "Enter") btnGarde.click(); });
         }
 
-        // --- 8. MENU BURGER MOBILE ---
-        var btnBurger = document.getElementById('mobile-menu');
-        var listeMenu = document.getElementById('nav-list');
-        var liensMenu = document.querySelectorAll('#nav-list a');
 
-        if(btnBurger && listeMenu) {
-            btnBurger.onclick = function() {
-                listeMenu.classList.toggle('active');
-            };
-        }
-
-        if(liensMenu) {
-            liensMenu.forEach(function(lien) {
-                lien.onclick = function() {
-                    listeMenu.classList.remove('active');
-                };
-            });
-        }
-    </script>
+</script>
+</body>
+</html>
+</script>
 </body>
 </html>
