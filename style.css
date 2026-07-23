@@ -265,6 +265,19 @@ a.service-item { text-decoration: none; color: var(--texte); }
 .old-price { text-decoration: line-through; color: #444; font-size: 0.9em; margin-right: 8px; font-weight: normal; }
 .promo-badge { position: absolute; top: 10px; left: 10px; width: 50px; height: 50px; background-color: #e74c3c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 10; }
 
+/* gestion de l ouverture et fermeture des promos */
+.promos-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-height: 15000px; /* hauteur max pour tout afficher (assez grand pour 30+ produits) */
+    transition: max-height 0.5s ease-in-out;
+    padding: 15px 10px; /* evite de couper les bordures et ombres */
+    margin: -15px -10px;
+}
+
+.promos-wrapper.collapsed {
+    max-height: 430px; /* hauteur calculee pour afficher juste la premiere ligne de cartes */
+}
 /* --- FIDELITE --- */
 .fidelite-card { background: white; border: 2px solid var(--vert); border-radius: 20px; padding: 40px; display: flex; align-items: center; gap: 50px; box-shadow: 0 10px 30px rgba(46, 204, 113, 0.15); }
 .fidelite-image { flex: 1; }

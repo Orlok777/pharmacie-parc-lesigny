@@ -156,7 +156,16 @@
         <div id="no-results" style="display:none; text-align:center; padding: 20px; color: #666;">
             Aucun produit ne correspond à votre recherche.
         </div>
-        <div class="promo-grid" id="promoContainer"></div>
+        
+        <!-- la boite qui englobe les promos pour les plier/deplier -->
+        <div class="promos-wrapper collapsed" id="promosWrapper">
+            <div class="promo-grid" id="promoContainer"></div>
+        </div>
+
+        <!-- le bouton voir plus -->
+        <div style="text-align: center; margin-top: 25px;">
+            <button id="togglePromosBtn" class="btn-more-marques"><i class="fas fa-plus"></i> voir toutes les promotions</button>
+        </div>
     </section>
 
     <section id="fidelite" class="container">
@@ -240,7 +249,7 @@
                 <div class="marque-item cizeta" onclick="filterByBrand('cizeta')"><img src="logos/cizeta.png" alt="logo de la marque cizeta"></div>
                 <div class="marque-item dexeryl" onclick="filterByBrand('dexeryl')"><img src="logos/dexeryl.png" alt="logo de la marque dexeryl"></div>
                 <div class="marque-item gallia" onclick="filterByBrand('gallia')"><img src="logos/gallia.png" alt="logo de la marque gallia"></div>
-                <div class="marque-item hydralin" onclick="filterByBrand('hydralin')"><img src="logos/hydralin.png" alt="logo de la marque hydralin"></div>
+                <div class="marque-item hydralin" onclick="filterByBrand('hydralin')"><img src="logos/Hydralin.png" alt="logo de la marque hydralin"></div>
                 <div class="marque-item laroche" onclick="filterByBrand('roche')"><img src="logos/la-roche-posay_1.png" alt="logo de la marque la roche-posay"></div>
                 <div class="marque-item larosee" onclick="filterByBrand('rosee')"><img src="logos/la rosée.png" alt="logo de la marque la rosee"></div>
                 <div class="marque-item mkl" onclick="filterByBrand('mkl')"><img src="logos/mkl.png" alt="logo de la marque mkl"></div>
@@ -250,7 +259,7 @@
                 <div class="marque-item nuxe" onclick="filterByBrand('nuxe')"><img src="logos/nuxe.png" alt="logo de la marque nuxe"></div>
                 <div class="marque-item orliman" onclick="filterByBrand('orliman')"><img src="logos/orliman.png" alt="logo de la marque orliman"></div>
                 <div class="marque-item pileje" onclick="filterByBrand('pileje')"><img src="logos/pileje.png" alt="logo du laboratoire pileje"></div>
-                <div class="marque-item saforelle" onclick="filterByBrand('saforelle')"><img src="logos/saforelle.png" alt="logo de la marque saforelle"></div>
+                <div class="marque-item saforelle" onclick="filterByBrand('saforelle')"><img src="logos/Saforelle.png" alt="logo de la marque saforelle"></div>
                 <div class="marque-item santeverte" onclick="filterByBrand('sante verte')"><img src="logos/santé verte.png" alt="logo du laboratoire sante verte"></div>
                 <div class="marque-item sigvaris" onclick="filterByBrand('sigvaris')"><img src="logos/sigvaris.png" alt="logo de la marque sigvaris"></div>
                 <div class="marque-item svr" onclick="filterByBrand('svr')"><img src="logos/svr.png" alt="logo du laboratoire svr"></div>
@@ -576,6 +585,21 @@
                     toggleMarquesBtn.innerHTML = '<i class="fas fa-plus"></i> voir toutes les marques';
                 } else {
                     toggleMarquesBtn.innerHTML = '<i class="fas fa-minus"></i> reduire la liste';
+                }
+            });
+        }
+        // gestion du bouton voir toutes les promos
+        const togglePromosBtn = document.getElementById('togglePromosBtn');
+        const promosWrapper = document.getElementById('promosWrapper');
+
+        if(togglePromosBtn && promosWrapper) {
+            togglePromosBtn.addEventListener('click', function() {
+                promosWrapper.classList.toggle('collapsed');
+                
+                if(promosWrapper.classList.contains('collapsed')) {
+                    togglePromosBtn.innerHTML = '<i class="fas fa-plus"></i> voir toutes les promotions';
+                } else {
+                    togglePromosBtn.innerHTML = '<i class="fas fa-minus"></i> reduire la liste';
                 }
             });
         }
