@@ -202,11 +202,11 @@
         <div class="faq-container">
             <details class="faq-item">
                 <summary>Peut-on venir à la pharmacie sans ordonnance ?</summary>
-                <p>Non, il n'est pas possible de venir à la pharmacie sans ordonnance.</p>
+                <p>C'est à la fois oui et non. Vous pouvez tout à fait venir sans ordonnance pour acheter des produits de parapharmacie ou des médicaments de base comme le Doliprane. En revanche, sans prescription médicale, la délivrance de certains médicaments est strictement interdite et aucun remboursement n'est possible.</p>
             </details>
-            <details class="faq-item">
-                <summary>Peut-on venir à la pharmacie sans carte vitale ?</summary>
-                <p>Non mais vous pouvez télécharger l'application e-carte vitale sur votre téléphone.</p>
+           <details class="faq-item">
+                <summary>Peut-on venir récupérer des médicaments sans la carte vitale ?</summary>
+                <p>Non, il nous faut la carte vitale pour délivrer des médicaments.</p>
             </details>
             <details class="faq-item">
                 <summary>Faut-il prendre rendez-vous pour se faire vacciner ?</summary>
@@ -214,7 +214,7 @@
             </details>
             <details class="faq-item">
                 <summary>Comment fonctionne la téléconsultation Medadom ?</summary>
-                <p>Il vous suffit de vous présenter à la pharmacie avec votre carte vitale et votre téléphone portable. La borne vous met en relation avec un médecin généraliste en moins de 10 minutes.</p>
+                <p>Il vous suffit de vous présenter à la pharmacie avec votre carte vitale et votre téléphone portable. La borne vous met en relation avec un médecin généraliste. A la fin de la téléconsultation, il y a un reste à charge qui est remboursé par la mutuelle.</p>
             </details>
             <details class="faq-item">
                 <summary>Louez-vous du matériel médical ?</summary>
@@ -228,30 +228,42 @@
     </section>
 
    <section id="marques" class="container">
-        <h2 class="title-left">Nos marques partenaires</h2>
-        <p class="section-subtitle">Retrouvez toutes vos gammes préférées de parapharmacie, homéopathie et orthopédie.</p>
-        <div class="marques-grid">
-            <div class="marque-item avene" onclick="filterByBrand('avene')"><img src="logos/avene.png" alt="Logo de la marque Avène"></div>
-            <div class="marque-item biocanina" onclick="filterByBrand('biocanina')"><img src="logos/biocanina.png" alt="Logo de la marque Biocanina"></div>
-            <div class="marque-item boiron" onclick="filterByBrand('oscillo')"><img src="logos/boiron.png" alt="Logo du laboratoire Boiron"></div>
-            <div class="marque-item caudalie" onclick="filterByBrand('caudalie')"><img src="logos/Caudalie.png" alt="Logo de la marque Caudalie"></div>
-            <div class="marque-item cizeta" onclick="filterByBrand('cizeta')"><img src="logos/cizeta.png" alt="Logo de la marque Cizeta"></div>
-            <div class="marque-item dexeryl" onclick="filterByBrand('dexeryl')"><img src="logos/dexeryl.png" alt="Logo de la marque Dexeryl"></div>
-            <div class="marque-item gallia" onclick="filterByBrand('gallia')"><img src="logos/gallia.png" alt="Logo de la marque Gallia"></div>
-            <div class="marque-item hydralin" onclick="filterByBrand('hydralin')"><img src="logos/Hydralin.png" alt="Logo de la marque Hydralin"></div>
-            <div class="marque-item laroche" onclick="filterByBrand('roche')"><img src="logos/la-roche-posay_1.png" alt="Logo de la marque La Roche-Posay"></div>
-            <div class="marque-item larosee" onclick="filterByBrand('rosée')"><img src="logos/la rosée.png" alt="Logo de la marque La Rosée"></div>
-            <div class="marque-item mkl" onclick="filterByBrand('mkl')"><img src="logos/mkl.png" alt="Logo de la marque MKL"></div>
-            <div class="marque-item modilac" onclick="filterByBrand('modilac')"><img src="logos/modilac.png" alt="Logo de la marque Modilac"></div>
-            <div class="marque-item nhco" onclick="filterByBrand('nhco')"><img src="logos/ncho.png" alt="Logo de la marque NHCO"></div>
-            <div class="marque-item nutricia" onclick="filterByBrand('nutricia')"><img src="logos/nutricia.png" alt="Logo de la marque Nutricia"></div>
-            <div class="marque-item nuxe" onclick="filterByBrand('nuxe')"><img src="logos/nuxe.png" alt="Logo de la marque Nuxe"></div>
-            <div class="marque-item orliman" onclick="filterByBrand('orliman')"><img src="logos/orliman.png" alt="Logo de la marque Orliman"></div>
-            <div class="marque-item pileje" onclick="filterByBrand('pileje')"><img src="logos/pileje.png" alt="Logo de la marque Pileje"></div>
-            <div class="marque-item saforelle" onclick="filterByBrand('saforelle')"><img src="logos/Saforelle.png" alt="Logo de la marque Saforelle"></div>
-            <div class="marque-item santeverte" onclick="filterByBrand('santé verte')"><img src="logos/santé verte.png" alt="Logo de la marque Santé Verte"></div>
-            <div class="marque-item sigvaris" onclick="filterByBrand('sigvaris')"><img src="logos/sigvaris.png" alt="Logo de la marque Sigvaris"></div>
-            <div class="marque-item svr" onclick="filterByBrand('svr')"><img src="logos/svr.png" alt="Logo de la marque SVR"></div>
+        <h2 class="title-left">Nos Marques Partenaires</h2>
+        <p class="section-subtitle">retrouvez toutes vos gammes preferees de parapharmacie, homeopathie et orthopedie.</p>
+        
+        <div class="marques-wrapper collapsed" id="marquesWrapper">
+            <div class="marques-grid">
+                <div class="marque-item avene" onclick="filterByBrand('avene')"><img src="logos/avene.png" alt="logo de la marque avene"></div>
+                <div class="marque-item biocanina" onclick="filterByBrand('biocanina')"><img src="logos/biocanina.png" alt="logo de la marque biocanina"></div>
+                <div class="marque-item boiron" onclick="filterByBrand('oscillo')"><img src="logos/boiron.png" alt="logo du laboratoire boiron"></div>
+                <div class="marque-item caudalie" onclick="filterByBrand('caudalie')"><img src="logos/Caudalie.png" alt="logo de la marque caudalie"></div>
+                <div class="marque-item cizeta" onclick="filterByBrand('cizeta')"><img src="logos/cizeta.png" alt="logo de la marque cizeta"></div>
+                <div class="marque-item dexeryl" onclick="filterByBrand('dexeryl')"><img src="logos/dexeryl.png" alt="logo de la marque dexeryl"></div>
+                <div class="marque-item gallia" onclick="filterByBrand('gallia')"><img src="logos/gallia.png" alt="logo de la marque gallia"></div>
+                <div class="marque-item hydralin" onclick="filterByBrand('hydralin')"><img src="logos/Hydralin.png" alt="logo de la marque hydralin"></div>
+                <div class="marque-item laroche" onclick="filterByBrand('roche')"><img src="logos/la-roche-posay_1.png" alt="logo de la marque la roche-posay"></div>
+                <div class="marque-item larosee" onclick="filterByBrand('rosee')"><img src="logos/la rosée.png" alt="logo de la marque la rosee"></div>
+                <div class="marque-item mkl" onclick="filterByBrand('mkl')"><img src="logos/mkl.png" alt="logo de la marque mkl"></div>
+                <div class="marque-item modilac" onclick="filterByBrand('modilac')"><img src="logos/modilac.png" alt="logo de la marque modilac"></div>
+                <div class="marque-item nhco" onclick="filterByBrand('nhco')"><img src="logos/ncho.png" alt="logo de la marque nhco"></div>
+                <div class="marque-item nutricia" onclick="filterByBrand('nutricia')"><img src="logos/nutricia.png" alt="logo de la marque nutricia"></div>
+                <div class="marque-item nuxe" onclick="filterByBrand('nuxe')"><img src="logos/nuxe.png" alt="logo de la marque nuxe"></div>
+                <div class="marque-item orliman" onclick="filterByBrand('orliman')"><img src="logos/orliman.png" alt="logo de la marque orliman"></div>
+                <div class="marque-item pileje" onclick="filterByBrand('pileje')"><img src="logos/pileje.png" alt="logo du laboratoire pileje"></div>
+                <div class="marque-item saforelle" onclick="filterByBrand('saforelle')"><img src="logos/Saforelle.png" alt="logo de la marque saforelle"></div>
+                <div class="marque-item santeverte" onclick="filterByBrand('sante verte')"><img src="logos/santé verte.png" alt="logo du laboratoire sante verte"></div>
+                <div class="marque-item sigvaris" onclick="filterByBrand('sigvaris')"><img src="logos/sigvaris.png" alt="logo de la marque sigvaris"></div>
+                <div class="marque-item svr" onclick="filterByBrand('svr')"><img src="logos/svr.png" alt="logo du laboratoire svr"></div>
+                
+                <div class="marque-item kreme" onclick="filterByBrand('kreme')"><img src="logos/kreme.png" alt="logo de la marque kreme"></div>
+                <div class="marque-item granions" onclick="filterByBrand('granions')"><img src="logos/granions.png" alt="logo du laboratoire granions"></div>
+                <div class="marque-item upsa" onclick="filterByBrand('upsa')"><img src="logos/upsa.png" alt="logo du laboratoire upsa"></div>
+                <div class="marque-item bonjour" onclick="filterByBrand('bonjour')"><img src="logos/bonjour.png" alt="logo de la marque bonjour"></div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 25px;">
+            <button id="toggleMarquesBtn" class="btn-more-marques"><i class="fas fa-plus"></i> voir toutes les marques</button>
         </div>
     </section>
 
@@ -550,6 +562,26 @@
             };
             inputZip.addEventListener("keypress", function(event) { if (event.key === "Enter") btnGarde.click(); });
         }
+        // ... ton autre code javascript au dessus ...
+
+        // gestion du bouton voir toutes les marques
+        const toggleMarquesBtn = document.getElementById('toggleMarquesBtn');
+        const marquesWrapper = document.getElementById('marquesWrapper');
+
+        if(toggleMarquesBtn && marquesWrapper) {
+            toggleMarquesBtn.addEventListener('click', function() {
+                marquesWrapper.classList.toggle('collapsed');
+                
+                if(marquesWrapper.classList.contains('collapsed')) {
+                    toggleMarquesBtn.innerHTML = '<i class="fas fa-plus"></i> voir toutes les marques';
+                } else {
+                    toggleMarquesBtn.innerHTML = '<i class="fas fa-minus"></i> reduire la liste';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
     </script>
 </body>
 </html>

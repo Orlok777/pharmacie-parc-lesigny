@@ -101,6 +101,68 @@ a.service-item { text-decoration: none; color: var(--texte); }
 
 /* --- MARQUES --- */
 .marques-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 20px; }
+/* gestion de l ouverture et fermeture de la liste */
+.marques-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-height: 1500px; 
+    transition: max-height 0.5s ease-in-out;
+    padding: 10px; /* repare les bordures du haut qui etaient coupees */
+    margin: -10px; /* compense le padding pour l alignement global */
+}
+
+.marques-wrapper.collapsed {
+    max-height: 160px; /* ajustement pour integrer le nouveau padding */
+}
+/* les points de suspension en degrade */
+.marques-fade {
+    display: none;
+}
+
+.marques-wrapper.collapsed .marques-fade {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1) 85%);
+    font-size: 2.5rem;
+    color: #999;
+    padding-bottom: 5px;
+    pointer-events: none;
+}
+
+/* le design du bouton voir plus */
+.btn-more-marques {
+    background: transparent;
+    color: var(--vert);
+    border: 2px solid var(--vert);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-more-marques:hover {
+    background: var(--vert);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-more-marques i {
+    margin-right: 8px;
+}
+
+/* couleurs des marques */
+.marque-item.kreme:hover { border-color: #87ceeb; box-shadow: 0 4px 8px rgba(135, 206, 235, 0.3); } /* bleu ciel kreme */
+.marque-item.granions:hover { border-color: #0056b3; box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3); } 
+.marque-item.upsa:hover { border-color: #2ecc71; box-shadow: 0 4px 8px rgba(46, 204, 113, 0.3); } /* vert upsa */
+.marque-item.bonjour:hover { border-color: #f39c12; box-shadow: 0 4px 8px rgba(243, 156, 18, 0.3); }
 
 /* mise en forme des cases avec bordure */
 .marque-item {
