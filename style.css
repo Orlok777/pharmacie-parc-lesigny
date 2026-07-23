@@ -105,11 +105,11 @@ a.service-item { text-decoration: none; color: var(--texte); }
 .marques-wrapper {
     position: relative;
     overflow: hidden;
-    max-height: 1500px; 
+    max-height: 4000px; /* on augmente la hauteur max pour le mobile */
     transition: max-height 0.5s ease-in-out;
-    padding: 10px; /* repare les bordures du haut qui etaient coupees */
-    margin: -10px; /* compense le padding pour l alignement global */
-}
+    padding: 10px; 
+    margin: -10px; 
+}   
 
 .marques-wrapper.collapsed {
     max-height: 160px; /* ajustement pour integrer le nouveau padding */
